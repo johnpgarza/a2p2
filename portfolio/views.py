@@ -160,7 +160,7 @@ def portfolio(request, pk):
                                                                                                  0.00)
     sum_acquired_value = Investment.objects.filter(customer=pk).aggregate(Sum('acquired_value')).get(
         'acquired_value__sum', 0.00)
-    overall_investment_results = sum_recent_value-sum_acquired_value
+    overall_investment_results = sum_recent_value - sum_acquired_value
     # Initialize the value of the stocks
     sum_current_stocks_value = 0
     sum_of_initial_stock_value = 0

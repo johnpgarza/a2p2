@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eec7e338-bc7f-4c43-b74a-2a3e3323f51f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/efs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/efs.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/templates/registration/password_change_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/templates/registration/password_reset_complete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/templates/registration/password_reset_confitm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/templates/registration/password_reset_done.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/templates/registration/password_reset_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/templates/registration/password_rest_email.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/portfolio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/efs/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/efs/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/efs/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/efs/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,11 +21,25 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="john &lt;jgarza@unomaha.edu&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="ProjectId" id="1Robs3hbg9kFe6FBV8yRrTV7Qvk" />
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunDashboard">
@@ -66,8 +89,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570336599569</updated>
-      <workItem from="1570336604395" duration="929000" />
+      <workItem from="1570336604395" duration="7858000" />
     </task>
+    <task id="LOCAL-00001" summary="Fixed the date.">
+      <created>1570339479829</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1570339479829</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -83,5 +114,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fixed the date." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the date." />
   </component>
 </project>
