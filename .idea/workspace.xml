@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eec7e338-bc7f-4c43-b74a-2a3e3323f51f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/portfolio/templates/registration/password_change_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/templates/registration/password_reset_complete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/templates/registration/password_reset_confitm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/templates/registration/password_reset_done.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/templates/registration/password_reset_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/templates/registration/password_rest_email.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/efs/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/efs/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/efs/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/efs/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="eec7e338-bc7f-4c43-b74a-2a3e3323f51f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570336599569</updated>
-      <workItem from="1570336604395" duration="7858000" />
+      <workItem from="1570336604395" duration="8113000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed the date.">
       <created>1570339479829</created>
@@ -98,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570339479829</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Installed Password management Django chapter 4.">
+      <created>1570348536928</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1570348536928</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +111,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed the date." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the date." />
+    <MESSAGE value="Installed Password management Django chapter 4." />
+    <option name="LAST_COMMIT_MESSAGE" value="Installed Password management Django chapter 4." />
   </component>
 </project>
