@@ -4,6 +4,8 @@ from django.shortcuts import redirect
 from django.shortcuts import render, get_object_or_404
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from django.core.mail import send_mail
+from django.conf import settings
 
 from .forms import *
 from .models import *
