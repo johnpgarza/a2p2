@@ -4,9 +4,6 @@ from django.shortcuts import redirect
 from django.shortcuts import render, get_object_or_404
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from django.core.mail import send_mail
-from django.conf import settings
-
 from .forms import *
 from .models import *
 from .serializers import CustomerSerializer
@@ -190,3 +187,46 @@ class CustomerList(APIView):
         customers_json = Customer.objects.all()
         serializer = CustomerSerializer(customers_json, many=True)
         return Response(serializer.data)
+
+
+def register(request):
+    if request.method == 'POST':
+        user_form = UserRegistrationForm(request.POST)
+        if user_form.is_valid():
+            # Create a new user object but avoid saving it yet
+            new_user = user_form.save(commit=False)
+            # Set the chosen password
+            new_user.set_password(
+                user_form.cleaned_data['password'])
+            # Save the USer object
+            new_user.save()
+            # Create the user profile
+            Profile.objects.create(user=new_user)
+            return render(request, 'portfolio/register_done.html', {'new_user': new_user})
+    else:
+        user_form = UserRegistrationForm()
+
+    return render(request, 'portfolio/register.html',
+                  {'user_form': user_form})
+
+
+@login_required
+def edit(request):
+    if request.method == 'POST':
+        user_form = UserEditForm(instance=request.user,
+                                 data=request.POST)
+        profile_form = ProfileEditForm(
+            instance=request.user.profile,
+            data=request.POST,
+            files=request.FILES)
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+            return render(request, 'portfolio/profile_change_done.html', {'user_form': user_form})
+    else:
+        user_form = UserEditForm(instance=request.user)
+        profile_form = ProfileEditForm(
+            instance=request.user.profile)
+    return render(request, 'portfolio/edit.html',
+                  {'user_from': user_form,
+                   'profile_form': profile_form})

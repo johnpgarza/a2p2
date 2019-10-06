@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Customer, Investment, Stock
+from .models import Customer, Investment, Stock, Profile
 
 
 class CustomerList(admin.ModelAdmin):
@@ -26,3 +26,8 @@ class StockList(admin.ModelAdmin):
 admin.site.register(Customer, CustomerList)
 admin.site.register(Investment, InvestmentList)
 admin.site.register(Stock, StockList)
+
+
+@admin.register(Profile)
+class ProfileAdmin(admin.ModelAdmin):
+    list_display = ['user', 'date_of_birth', 'photo']
