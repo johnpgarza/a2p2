@@ -1,8 +1,8 @@
 from django.conf.urls import url
-from django.contrib.auth.views import LoginView
+from django.urls import path
+from rest_framework.urlpatterns import format_suffix_patterns
 
 from . import views
-from django.urls import path
 
 app_name = 'portfolio'
 urlpatterns = [
@@ -19,5 +19,9 @@ urlpatterns = [
     path('investment/<int:pk>/edit/', views.investment_edit, name='investment_edit'),
     path('investment/<int:pk>/delete/', views.investment_delete, name='investment_delete'),
     path('investment/create/', views.investment_new, name='investment_new'),
-
+    path('customer/<int:pk>/portfolio/', views.portfolio, name='portfolio'),
+    url(r'^customers_json/', views.CustomerList.as_view()),
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)
+

@@ -72,4 +72,20 @@ class Stock(models.Model):
         return str(self.customer)
 
     def initial_stock_value(self):
-        return self.shares * self.purchase_price
+        return float(self.shares) * float(self.purchase_price)
+
+    def current_stock_price(self):
+        symbol_f = str(self.symbol)
+        main_api = 'https://www.alphavantage.co/query?function=BATCH_STOCK_QUOTES&symbols='
+        api_key = '&apikey= A4DDE0W7Y9AHXYB'
+        url = main_api + symbol_f + api_key
+        json_data = requests.get(url).json()
+        open_price = float(json_data["Stock Quotes"][0]["2. price"])
+        share_value = open_price
+        return share_value
+
+    def current_stock_value(self):
+        return float(self.current_stock_price()) * float(self.shares)
+
+    def stock_results(self):
+        return float(self.current_stock_value()) - float(self.initial_stock_value())
