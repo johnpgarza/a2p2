@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e8bab06-bba9-46a1-b8c7-9d7009c0979a" name="Default Changelist" comment="Second Commit.">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/my_key.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/portfolio.html" afterDir="false" />
+    <list default="true" id="eec7e338-bc7f-4c43-b74a-2a3e3323f51f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/efs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/efs.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/efs/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/efs/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/customer_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/customer_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/portfolio.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,32 +12,12 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
-    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="john &lt;jgarza@unomaha.edu&gt;" />
-      </list>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1RnuSiPWtnbgYrAMaqOmztUOmVj" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1Robs3hbg9kFe6FBV8yRrTV7Qvk" />
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -89,20 +61,17 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5e8bab06-bba9-46a1-b8c7-9d7009c0979a" name="Default Changelist" comment="" />
-      <created>1570315182935</created>
+      <changelist id="eec7e338-bc7f-4c43-b74a-2a3e3323f51f" name="Default Changelist" comment="" />
+      <created>1570336599569</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1570315182935</updated>
-      <workItem from="1570315187842" duration="16284000" />
+      <updated>1570336599569</updated>
+      <workItem from="1570336604395" duration="929000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="UpdateCopyrightCheckinHandler">
-    <option name="UPDATE_COPYRIGHT" value="true" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -114,11 +83,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="Second Commit." />
-    <option name="LAST_COMMIT_MESSAGE" value="Second Commit." />
   </component>
 </project>

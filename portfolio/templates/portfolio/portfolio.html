@@ -145,9 +145,9 @@
                         <td>{{ investment.category }}</td>
                         <td>{{ investment.description }}</td>
                         <td>{{ investment.acquired_value|floatformat:2|intcomma }}</td>
-                        <td>{{ investment.acquired_date|floatformat:2|intcomma }}</td>
+                        <td>{{ investment.acquired_date|naturalday }}</td>
                         <td>{{ investment.recent_value|floatformat:2|intcomma }}</td>
-                        <td>{{ investment.recent_date|floatformat:2|intcomma }}</td>
+                        <td>{{ investment.recent_date|naturalday }}</td>
                         <td>{{ investment.results_by_investment|floatformat:2|intcomma }}</td>
                     </tr>
                 {% endfor %}
