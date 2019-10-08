@@ -1,4 +1,4 @@
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 from django.db.models import Sum
 from django.shortcuts import redirect
 from django.shortcuts import render, get_object_or_404
@@ -17,6 +17,7 @@ def home(request):
 
 
 @login_required
+@user_passes_test(lambda User: User.groups.filter(name='Admin'), login_url='/access_denied')
 def customer_list(request):
     customer = Customer.objects.filter(created_date__lte=timezone.now())
     return render(request, 'portfolio/customer_list.html',
@@ -24,6 +25,7 @@ def customer_list(request):
 
 
 @login_required
+@user_passes_test(lambda User: User.groups.filter(name='Admin'), login_url='/access_denied')
 def customer_edit(request, pk):
     customer = get_object_or_404(Customer, pk=pk)
     if request.method == "POST":
@@ -43,6 +45,7 @@ def customer_edit(request, pk):
 
 
 @login_required
+@user_passes_test(lambda User: User.groups.filter(name='Admin'), login_url='/access_denied')
 def customer_delete(request, pk):
     customer = get_object_or_404(Customer, pk=pk)
     customer.delete()
@@ -50,12 +53,14 @@ def customer_delete(request, pk):
 
 
 @login_required
+@user_passes_test(lambda User: User.groups.filter(name='Admin'), login_url='/access_denied')
 def stock_list(request):
     stocks = Stock.objects.filter(purchase_date__lte=timezone.now())
     return render(request, 'portfolio/stock_list.html', {'stocks': stocks})
 
 
 @login_required
+@user_passes_test(lambda User: User.groups.filter(name='Admin'), login_url='/access_denied')
 def stock_new(request):
     if request.method == "POST":
         form = StockForm(request.POST)
@@ -74,6 +79,7 @@ def stock_new(request):
 
 
 @login_required
+@user_passes_test(lambda User: User.groups.filter(name='Admin'), login_url='/access_denied')
 def stock_edit(request, pk):
     stock = get_object_or_404(Stock, pk=pk)
     if request.method == "POST":
@@ -92,6 +98,7 @@ def stock_edit(request, pk):
 
 
 @login_required
+@user_passes_test(lambda User: User.groups.filter(name='Admin'), login_url='/access_denied')
 def stock_delete(request, pk):
     stock = get_object_or_404(Stock, pk=pk)
     stock.delete()
@@ -100,12 +107,14 @@ def stock_delete(request, pk):
 
 
 @login_required
+@user_passes_test(lambda User: User.groups.filter(name='Admin'), login_url='/access_denied')
 def investment_list(request):
     investments = Investment.objects.filter(acquired_date__lte=timezone.now())
     return render(request, 'portfolio/investment_list.html', {'investments': investments})
 
 
 @login_required
+@user_passes_test(lambda User: User.groups.filter(name='Admin'), login_url='/access_denied')
 def investment_edit(request, pk):
     investment = get_object_or_404(Investment, pk=pk)
     if request.method == "POST":
@@ -125,6 +134,7 @@ def investment_edit(request, pk):
 
 
 @login_required
+@user_passes_test(lambda User: User.groups.filter(name='Admin'), login_url='/access_denied')
 def investment_delete(request, pk):
     investment = get_object_or_404(Investment, pk=pk)
     investment.delete()
@@ -133,6 +143,7 @@ def investment_delete(request, pk):
 
 
 @login_required
+@user_passes_test(lambda User: User.groups.filter(name='Admin'), login_url='/access_denied')
 def investment_new(request):
     if request.method == "POST":
         form = InvestmentForm(request.POST)
@@ -150,6 +161,7 @@ def investment_new(request):
 
 
 @login_required
+@user_passes_test(lambda User: User.groups.filter(name='Admin'), login_url='/access_denied')
 def portfolio(request, pk):
     customer = get_object_or_404(Customer, pk=pk)
     customers = Customer.objects.filter(created_date__lte=timezone.now())
@@ -202,6 +214,7 @@ def register(request):
             new_user.save()
             # Create the user profile
             Profile.objects.create(user=new_user)
+            # Customer.objects.create(customer=new_user)
             return render(request, 'portfolio/register_done.html', {'new_user': new_user})
     else:
         user_form = UserRegistrationForm()
@@ -230,3 +243,8 @@ def edit(request):
     return render(request, 'portfolio/edit.html',
                   {'user_from': user_form,
                    'profile_form': profile_form})
+
+
+def access_denied(request):
+    return render(request, 'portfolio/access_denied.html',
+                  {'portfolio': access_denied})

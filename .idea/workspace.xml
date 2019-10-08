@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eec7e338-bc7f-4c43-b74a-2a3e3323f51f" name="Default Changelist" comment="" />
+    <list default="true" id="eec7e338-bc7f-4c43-b74a-2a3e3323f51f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/access_denied.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/efs/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/efs/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/views.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +95,8 @@
       <option name="presentableId" value="Default" />
       <updated>1570336599569</updated>
       <workItem from="1570336604395" duration="9495000" />
-      <workItem from="1570350201473" duration="10773000" />
+      <workItem from="1570350201473" duration="14206000" />
+      <workItem from="1570492292528" duration="9860000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed the date.">
       <created>1570339479829</created>
@@ -124,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570394705217</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Enabled Registration and Profiles.">
+      <created>1570394848050</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1570394848050</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

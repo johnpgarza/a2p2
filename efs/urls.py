@@ -22,7 +22,7 @@ from django.contrib.auth.views import LoginView, LogoutView, PasswordChangeView,
     PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls,),
     path('', include('portfolio.urls')),
     path('login/', LoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
@@ -39,7 +39,6 @@ urlpatterns = [
     path('reset/done/', PasswordResetCompleteView.as_view(),
          name='password_reset_complete'),
     url('^accounts/', include('django.contrib.auth.urls')),
-
 ]
 
 if settings.DEBUG:

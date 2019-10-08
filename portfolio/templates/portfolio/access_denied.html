@@ -1,0 +1,18 @@
+{% extends 'portfolio/base.html' %}
+{% load staticfiles %}
+{% block content %}
+    {% if user.is_authenticated %}
+        <div class="page-container">
+            <h2 class="top-menu">Hello {{ user.username }},</h2>
+            <p>Unfortunately you do not have access to this page.</p>
+
+        </div>
+    {% endif %}
+    <div class="content container">
+        <div class="row">
+
+        </div>
+    </div>
+    </body>
+    </html>
+{% endblock %}

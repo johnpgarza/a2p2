@@ -68,14 +68,27 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
+
                 <li><a href="{% url 'portfolio:home' %}">Home</a></li>
-                <li><a href="{% url 'portfolio:customer_list' %}">Customers</a></li>
-               <li><a href="{% url 'portfolio:investment_list' %}">Investments</a></li>
-                <li><a href="{% url 'portfolio:stock_list' %}">Stocks</a></li>
-                <li><a href="{% url 'portfolio:register'%}">Join</a></li>
-                <li><a href="{% url 'portfolio:edit' %}">My Profile</a></li>
+                {% if user.is_authenticated %}
+
+                    {% if user.groups.all.0.name == "Admin" %}
+                        <li><a href="{% url 'portfolio:customer_list' %}">Customers</a></li>
+                        <li><a href="{% url 'portfolio:investment_list' %}">Investments</a></li>
+                        <li><a href="{% url 'portfolio:stock_list' %}">Stocks</a></li>
+                        <li><a href="{% url 'portfolio:edit' %}">My Profile</a></li>
+                    {% else %}
+                        <li><a href="{% url 'portfolio:edit' %}">My Profile</a></li>
+                    {% endif %}
+
+                {% else %}
+
+                    <li><a href="{% url 'portfolio:register' %}">Join</a></li>
+                {% endif %}
 
             </ul>
+
+
             <ul class="nav navbar-nav navbar-right">
                 {% if user.is_authenticated %}
                     <li class="dropdown">
@@ -84,6 +97,9 @@
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="{% url 'logout' %}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                            {% if user.groups.all.0.name == "Admin" %}
+                                <li><a href="/admin"><i class="fa fa-btn fa-sign-out"></i>Admin Dash</a></li>
+                            {% endif %}
                         </ul>
                     </li>
                 {% else %}
@@ -93,57 +109,58 @@
         </div>
     </div>
 </nav>
+
 <div class="content container">
     <div class="row">
         <div class="col-md-8">
-            {% block content %}
-                <div class="links">
-                    <!-- Example row of columns -->
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="thumbnail">
-                                <img src="{% static "images/customer.jpg" %}" alt="customer"/>
-                                <div class="caption">
-                                    <h2>Customer</h2>
-                                    <p>We see our success in our customers success, it gives us an immense pleasure when
-                                        our
-                                        advises
-                                        turn out to be fruitful. </p>
-                                    {% if user.is_authenticated %}
+                {% block content %}
+                    <div class="links">
+                        <!-- Example row of columns -->
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="{% static "images/customer.jpg" %}" alt="customer"/>
+                                    <div class="caption">
+                                        <h2>Customer</h2>
+                                        <p>We see our success in our customers success, it gives us an immense pleasure
+                                            when
+                                            our
+                                            advises
+                                            turn out to be fruitful. </p>
+                                            <p><a class="btn btn-default" href="{% url 'portfolio:customer_list' %}"
+                                                  role="button">View
+                                                details &raquo;</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="{% static "images/nonstock.jpg" %}" alt="non-stock"/>
+                                    <div class="caption">
+                                        <h2>Non-Stock Investments</h2>
+                                        <p>Our team also provides advises for Non-Stock investments.</p>
                                         <p><a class="btn btn-default" href="{% url 'portfolio:customer_list' %}"
                                               role="button">View
                                             details &raquo;</a></p>
-                                    {% endif %}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="thumbnail">
-                                <img src="{% static "images/nonstock.jpg" %}" alt="non-stock"/>
-                                <div class="caption">
-                                    <h2>Non-Stock Investments</h2>
-                                    <p>Our team also provides advises for Non-Stock investments.</p>
-                                    <p><a class="btn btn-default" href="{% url 'portfolio:customer_list' %}"
-                                           role="button">View
-                                        details &raquo;</a></p>
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <h2>Stock Portfolio</h2>
+                                        <p>Our Stock portfolios vary across industries.</p>
+                                        <p><a class="btn btn-default" href="{% url 'portfolio:stock_list' %}"
+                                              role="button">View
+                                            details &raquo;</a></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="thumbnail">
-                                <img src="{% static "images/stocks.jpg" %}" alt="stocks"/>
-                                <div class="caption">
-                                    <h2>Stock Portfolio</h2>
-                                    <p>Our Stock portfolios vary across industries.</p>
-                                    <p><a class="btn btn-default" href="{% url 'portfolio:stock_list' %}" role="button">View
-                                        details &raquo;</a></p>
-                                </div>
-                            </div>
-                        </div>
 
+
+                        </div>
                     </div>
-                </div>
-            {% endblock %}
+                {% endblock %}
         </div>
     </div>
 </body>
